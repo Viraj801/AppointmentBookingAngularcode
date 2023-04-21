@@ -1,0 +1,27 @@
+<div class="container" id="container">
+    <div class="form-container sign-in-container">
+        <form>
+            <h1>Sign Up</h1>
+            <div class="social-container">
+                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social"><i class="fab fa-instagram"></i></a>
+            </div>
+            <span>Resistraction Form </span>
+            <input matInput type="text" placeholder="Name" [(ngModel)]="patient.patientName"
+                [ngModelOptions]="{standalone: true}" required />
+            <input type="text" placeholder="Gender" [(ngModel)]="patient.gender" [ngModelOptions]="{standalone: true}"
+                required />
+            <input type="date" placeholder=" Date of Birth" [(ngModel)]="patient.dateOfBirth"
+                [ngModelOptions]="{standalone: true}" required />
+            <input type="text" placeholder="Enter Your Contect number" [(ngModel)]="patient.contactNumber"
+                [ngModelOptions]="{standalone: true}" required />
+            <input type="email" placeholder="Email" [(ngModel)]="patient.patientEmailId"
+                [ngModelOptions]="{standalone: true}" required />
+            <input type="password" required placeholder="Password" [(ngModel)]="patient.password"
+                [ngModelOptions]="{standalone: true}" />
+            <button (click)="resisterPatient()">Sign Up</button>
+        </form>
+    </div>
+</div>

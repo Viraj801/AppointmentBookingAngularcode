@@ -1,0 +1,182 @@
+.social-container {
+	margin: 20px 0;
+}
+
+.social-container a {
+	border: 1px solid #DDDDDD;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 5px;
+	height: 40px;
+	width: 40px;
+  background-color: #DDDDDD;
+}
+.angkar{
+    margin-left: 50px;
+
+}
+.navbar{
+    justify-content: center;
+    background-color:lightblue;
+    width: 110%;
+    height: 50px;
+}
+.footer-nav{
+  display: flex;
+  justify-content:space-around;
+  font-size: medium;
+  padding: 10px;
+  margin: 10px;
+  align-items: center;
+  list-style: none;
+}
+.header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./image/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+    display: block;
+}
+.body{
+    background-color: #fff;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    font-size: 18px;
+}
+.hero-text-box {
+    
+    width: 100%;
+    padding: 0 2%;
+    padding-right: 2%;
+    padding-bottom: 0px;
+    padding-left: 2%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* section { */
+    /* padding: 60px 0; */
+/* } */
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #30a5ff;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.long-copy {
+    width: 80%;
+    margin-left: 10%;
+}
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 30px;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.js-wp-1.animated, js-wp-2.animated, js-wp-3.animated {
+    opacity: 1;
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+nav {
+    display: block;
+}
+app-screen{
+    background-image: url(./image/app-iPhone.png);
+}
+h1,h2,h3{
+    margin: 0;
+    /* color: #fff; */
+    font-size: 240%;
+    word-spacing: 4px;
+    letter-spacing: 1px
+}
+.btn-ghost:link, .btn-ghost:visited {
+    border: 1px solid #30a5ff;
+    color: #30a5ff;
+}
+
+.btn:link, .btn:visited, input[type=submit] {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 100px;
+    transition: background-color 0.4s, border 0.4s, color 0.4s;
+}
+a:link, a:visited {
+    text-decoration: none;
+    padding-bottom: 1px;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+a {
+    background-color: transparent;
+    text-decoration: none;
+    
+}
+
+.box p {
+    font-size: 90%;
+    line-height: 145%;
+}
+.main-nav{
+    display: flex;
+    justify-content: center;
+    padding-top: 0;
+}
+.row{
+    text-align: center;
+}
+#navbar {
+    overflow: hidden;
+  }
+  
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+.sticky + .content {
+    padding-top: 60px;
+  }
+  .js-main-nav{
+    background-color:lightblue ;
+  }
+  .angkar{
+    color: black;
+  }
+
+  .section-testimonials{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+.logo{
+position: absolute;
+ top: 50%;
+ left: 20%;
+ transform: translate(-20%, -20%);
+  }

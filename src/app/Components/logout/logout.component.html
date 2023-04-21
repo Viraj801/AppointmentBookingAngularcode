@@ -1,0 +1,53 @@
+
+
+
+<div class="retingbox">
+     
+    <div>
+        <h1>
+            THANK YOU VISIT AGAIN.....
+        </h1>
+    </div>
+    <div class="rating">
+        <span class="star" (click)="setRating(1)" [class.active]="rating >= 1">&#9733;</span>
+        <span class="star" (click)="setRating(2)" [class.active]="rating >= 2">&#9733;</span>
+        <span class="star" (click)="setRating(3)" [class.active]="rating >= 3">&#9733;</span>
+        <span class="star" (click)="setRating(4)" [class.active]="rating >= 4">&#9733;</span>
+        <span class="star" (click)="setRating(5)" [class.active]="rating >= 5">&#9733;</span>
+      </div>
+      <div class="row">
+        <textarea class="textarea" rows="5" cols="50" [(ngModel)]="comment"></textarea>
+      </div>
+      <div class="row">
+        <button  class="button" (click)="submitComment()">Submit Comment</button>  
+      </div>
+      
+</div>
+
+<footer style="background-color:lightblue;">
+    <div class="row">
+      <div class="col span-1-of-2">
+        <ul class="footer-nav">
+          <li href="#" class="social">Press news icon</li>
+          <li href="#" class="btn">About us</li>
+          <li href="#" class="btn">Blog</li>
+          <li  class="btn">IOS App</li>
+          <li class="btn">Andriod App</li>
+        </ul>
+      </div>
+      <div class="col span-1-of-2">
+        <ul class="social-links">
+            <div class="social-container">
+            <a class="social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social"> <i class="fab fa-instagram"></i></a>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <p> Copyright © 2023 by HMS. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- <router-outlet></router-outlet> -->

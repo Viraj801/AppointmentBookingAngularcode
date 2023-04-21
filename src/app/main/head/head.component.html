@@ -1,0 +1,64 @@
+<div>
+    <header >
+            <div class="navbar" >
+                <div class="row headsection">
+                    <div class="col">
+                        <a class="angkar" href="#Home">Home</a>
+                     </div>
+                     <div class="col">
+                        <a class="angkar" href="#contact">About</a>
+                     </div>  
+                     <div class="col">
+                         <a class="angkar" href="#contact">Contact</a>
+                     </div>  
+                     <div class="col">
+                        <a class="angkar" (click)="ChangeCom(2)">Register</a>
+                     </div>
+                       <div class="col">
+                        <a class="angkar" (click)="ChangeCom(1)">SignIn</a>
+                     </div>  
+                </div>                            
+            </div>
+    </header>
+</div>
+    <div class="header" *ngIf="status==0">
+        <div class="row logo">
+            <div class="col">
+                <h1 style="color: #fff">Appointment Booking System.</h1>
+            </div>
+            <div class="col">
+                <a class="btn btn-ghost js-scroll-to-start" href="#">Show me more</a>
+            </div> 
+        </div>
+    </div>
+<div>
+    <app-login *ngIf="status==1"></app-login>
+ <app-resister *ngIf="status==2"></app-resister>
+</div>
+
+<footer id="contact" style="background-color:lightblue;">
+    <div class="row">
+        <div class="col span-1-of-2">
+            <ul class="footer-nav" style="list-style: none;">
+                <li>About us</li>
+                <li>Blog</li>
+                <li>Press</li>
+                <li>IOS App</li>
+                <li>Andriod App</li>
+            </ul>
+        </div>
+        <div class="col span-1-of-2">
+            <ul class="social-links">
+                <div class="social-container">
+                    <a class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social"> <i class="fab fa-instagram"></i></a>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <p> Copyright © 2023 by HMS. All rights reserved.</p>
+    </div>
+</footer>

@@ -1,0 +1,108 @@
+
+
+<mat-sidenav-container class="sidenav-container" color="primary">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+      <mat-toolbar style="justify-content: center; background-color: rgb(166, 198, 254);">
+      <a mat-list-item routerLink="/admindetails" ><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i></a>
+      </mat-toolbar>
+      <mat-nav-list>
+  
+        <a mat-list-item routerLink="/login">Login</a>
+        <a mat-list-item routerLink="/admindetails">admindetails</a>
+        <a mat-list-item routerLink="/editadmindetails">updateadmindetails</a>
+        <li class="nav-item dropdown">
+          <button class="btn  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Admin
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" routerLink="/admindetails">DETAILS</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <button class="btn  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Doctor
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" routerLink="/getAllDocotrs">GET ALL DOCTORS</a></li>
+            <li><a class="dropdown-item" routerLink="/resisterDoctor">RESISTER DOCTOR</a></li>
+          </ul>
+        </li>
+  
+        <li class="nav-item dropdown">
+          <a class="btn dropdown-toggle mat-list-item" data-bs-toggle="dropdown" aria-expanded="false">
+            Patient
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" routerLink="/getallpatients">PATIENTS</a></li>
+            <li><a class="dropdown-item" routerLink="/resister">RESISTER PATIENTS</a></li>
+            <li><a class="dropdown-item" routerLink="/appointmentlist">APPOINTMENT LIST</a></li>
+            <li><a class="dropdown-item" routerLink="/pendingappointment"> PENDING APPOINTMENTs</a></li>
+            <li><a class="dropdown-item" routerLink="/completeappointment">COMPLETE APPOINTMENTs</a></li>
+            <li><a class="dropdown-item" routerLink="/completeappointment">REJECT APPOINTMENTs</a></li>
+          </ul>
+        </li>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar style="background-color:lightblue;">
+        <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span>Doctor Appointment App</span>
+        
+        <li class="header-list">
+          <span  style="display: flex;">
+          <ul>Home</ul>
+          <ul>Sevices</ul>
+          <ul><a class="dropdown-item" routerLink="/logout">Logout</a></ul>
+        </span>
+        </li>
+      </mat-toolbar>
+      <div class="container" id="container">
+        <div class="form-container sign-in-container">
+            <form >
+                <h1>Sign Up</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social"><i class="fab fa-instagram"></i></a>
+                </div>
+                <input matInput type="text" placeholder="Name" [(ngModel)]="patient.patientName" [ngModelOptions]="{standalone: true}" required/>
+                <input type="text" placeholder="Gender" [(ngModel)]="patient.gender" [ngModelOptions]="{standalone: true}" required />
+                <input type="date" placeholder=" Date of Birth"  [(ngModel)]="patient.dateOfBirth" [ngModelOptions]="{standalone: true}" required/>
+         <input  type="text" placeholder="Enter Your Contect number" [(ngModel)]="patient.contactNumber" [ngModelOptions]="{standalone: true}" required/>
+                <input  type="email" placeholder="Email" [(ngModel)]="patient.patientEmailId" [ngModelOptions]="{standalone: true}" required/>
+                <input  type="password"  required placeholder="Password" [(ngModel)]="patient.password" [ngModelOptions]="{standalone: true}"/>
+                <button (click)="resisterPatient()">Sign Up</button>
+            </form>
+        </div>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  <footer style="background-color:lightblue;">
+    <div class="row">
+      <div class="col span-1-of-2">
+        <ul class="footer-nav">
+          <li href="#" class="social">Press news icon</li>
+          <li href="#" class="btn">About us</li>
+          <li href="#" class="btn">Blog</li>
+          <li  class="btn">IOS App</li>
+          <li class="btn">Andriod App</li>
+        </ul>
+      </div>
+      <div class="col span-1-of-2">
+        <ul class="social-links">
+            <div class="social-container">
+            <a class="social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social"> <i class="fab fa-instagram"></i></a>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <p> Copyright © 2023 by HMS. All rights reserved.</p>

@@ -1,0 +1,115 @@
+<!-- <h1>Admin Details</h1> -->
+
+<mat-sidenav-container class="sidenav-container" color="primary">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <mat-toolbar style="justify-content: center; background-color: rgb(166, 198, 254);">
+    <a mat-list-item routerLink="/admindetails" ><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i></a>
+    </mat-toolbar>
+    <mat-nav-list>
+
+      <a mat-list-item routerLink="/login">Login</a>
+      <a mat-list-item routerLink="/admindetails">admindetails</a>
+      <a mat-list-item routerLink="/editadmindetails">updateadmindetails</a>
+      <li class="nav-item dropdown">
+        <button class="btn  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Admin
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark">
+          <li><a class="dropdown-item" routerLink="/admindetails">DETAILS</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <button class="btn  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Doctor
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark">
+          <li><a class="dropdown-item" routerLink="/getAllDocotrs">GET ALL DOCTORS</a></li>
+          <li><a class="dropdown-item" routerLink="/resisterDoctor">RESISTER DOCTOR</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="btn dropdown-toggle mat-list-item" data-bs-toggle="dropdown" aria-expanded="false">
+          Patient
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark">
+          <li><a class="dropdown-item" routerLink="/getallpatients">PATIENTS</a></li>
+          <li><a class="dropdown-item" routerLink="/resister">RESISTER PATIENTS</a></li>
+          <li><a class="dropdown-item" routerLink="/appointmentlist">APPOINTMENT LIST</a></li>
+          <li><a class="dropdown-item" routerLink="/pendingappointment"> PENDING APPOINTMENTs</a></li>
+          <li><a class="dropdown-item" routerLink="/completeappointment">COMPLETE APPOINTMENTs</a></li>
+          <li><a class="dropdown-item" routerLink="/completeappointment">REJECT APPOINTMENTs</a></li>
+        </ul>
+      </li>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar style="background-color:lightblue;">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Doctor Appointment App</span>
+      
+      <li class="header-list">
+        <span  style="display: flex;">
+        <ul>Home</ul>
+        <ul>Sevices</ul>
+        <ul><a class="dropdown-item" routerLink="/logout">Logout</a></ul>
+      </span>
+      </li>
+    </mat-toolbar>
+    <div class="container overflow-hidden">
+      <div class="row gy-5">
+        <div class="col-6">
+          <mat-label>Admin Id </mat-label>
+          <div matInput class="p-3 border bg-light">{{admin.adminId}}</div>
+        </div>
+        <div class="col-6">
+          <mat-label>Admin Name </mat-label>
+          <div class="p-3 border bg-light">{{admin.adminName}}</div>
+        </div>
+        <div class="col-6">
+          <mat-label>Admin Email Address </mat-label>
+          <div class="p-3 border bg-light">{{admin.email}}</div>
+        </div>
+        <div class="col-6">
+          <mat-label> Password </mat-label>
+          <div class="p-3 border bg-light">{{admin.password}}</div>
+        </div>
+      </div>
+      <div class="button">
+      <a data-bs-toggle="tooltip" data-bs-title="edit"  (click)="gotoEditCompoent(admin.email)">Edit</a>
+      </div>
+    </div>
+        <!-- <router-outlet></router-outlet>  -->
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<footer style="background-color:lightblue;">
+  <div class="row">
+    <div class="col span-1-of-2">
+      <ul class="footer-nav">
+        <li href="#" class="social">Press news icon</li>
+        <li href="#" class="btn">About us</li>
+        <li href="#" class="btn">Blog</li>
+        <li  class="btn">IOS App</li>
+        <li class="btn">Andriod App</li>
+      </ul>
+    </div>
+    <div class="col span-1-of-2">
+      <ul class="social-links">
+          <div class="social-container">
+          <a class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social"> <i class="fab fa-instagram"></i></a>
+        </div>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <p> Copyright © 2023 by HMS. All rights reserved.</p>
+  </div>
+</footer>
+<!-- <router-outlet></router-outlet> -->
