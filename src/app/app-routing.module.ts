@@ -6,7 +6,6 @@ import { LoginComponent } from './Components/login/login.component';
 import { LogoutComponent } from './Components/logout/logout.component';
 import { NavComponent } from './Components/nav/nav.component';
 import { ResisterComponent } from './Components/resister/resister.component';
-import { DemooComponent } from './demoo/demoo.component';
 import { DeleteDoctorComponent } from './Doctor/delete-doctor/delete-doctor.component';
 import { GetAllDocotorsComponent } from './Doctor/get-all-docotors/get-all-docotors.component';
 import { ResisterDoctorComponent } from './Doctor/resister-doctor/resister-doctor.component';
@@ -39,7 +38,6 @@ const routes: Routes = [
   {path:'head/login',component:LoginComponent},
   {path:'login/gotoreisiter',component:ResisterComponent},
   {path:'',component:HeadComponent},
-  {path:'demoo',component:DemooComponent}
 ];
 
 @NgModule({

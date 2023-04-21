@@ -2,8 +2,8 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { map, Observable, shareReplay } from 'rxjs';
+import { Doctor } from 'src/app/models/doctor';
 import { AdminService } from 'src/app/Service/admin.service';
-import { Doctor } from '../../../../../doctorappointmentweb/src/app/models/doctor';
 
 @Component({
   selector: 'app-get-all-docotors',

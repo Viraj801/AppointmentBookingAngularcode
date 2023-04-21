@@ -2,9 +2,9 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { map, Observable, shareReplay } from 'rxjs';
+import { Appointments } from 'src/app/models/appointments';
 import { Patient } from 'src/app/models/patient';
 import { AdminService } from 'src/app/Service/admin.service';
-import { Appointments } from '../../../../../doctorappointmentweb/src/app/models/appointments';
 
 @Component({
   selector: 'app-complete-appointemnt-list',

@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Appointments } from '../../../../doctorappointmentweb/src/app/models/appointments';
-import { Doctor } from '../../../../doctorappointmentweb/src/app/models/doctor';
+import { Appointments } from '../models/appointments';
+import { Doctor } from '../models/doctor';
+
 import { Patient } from '../models/patient';
 
 

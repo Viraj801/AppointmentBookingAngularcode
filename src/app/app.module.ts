@@ -28,8 +28,6 @@ import { CompleteAppointemntListComponent } from './patient/complete-appointemnt
 import { HeadComponent } from './main/head/head.component';
 import { LogoutComponent } from './Components/logout/logout.component';
 import { EditadminComponent } from './admin/editadmin/editadmin.component';
-import { DemooComponent } from './demoo/demoo.component';
-
 
 @NgModule({
   declarations: [
@@ -49,8 +47,6 @@ import { DemooComponent } from './demoo/demoo.component';
    HeadComponent,
    LogoutComponent,
    EditadminComponent,
-   DemooComponent,
-
   ],
   imports: [
     BrowserModule,
